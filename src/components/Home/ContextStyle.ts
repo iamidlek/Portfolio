@@ -40,7 +40,7 @@ export const Text = styled(motion.div)<{ size: number }>`
 `;
 
 export const TitleBox = styled(motion.div)`
-  height: 140px;
+  height: 180px;
   padding-top: 120px;
   padding-left: 50px;
   @media ${(props) => props.theme.breakpoints.sm} {
