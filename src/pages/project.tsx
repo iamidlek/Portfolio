@@ -11,7 +11,7 @@ import {
 import { CardGrid } from "../components/Layout/Grid";
 import { ContentPageContainer } from "../components/Layout/HomePageStyle";
 import { projects } from "../../public/projectdata";
-import { IoLogoOctocat } from "react-icons/io5";
+import { IoLogoOctocat, IoLink } from "react-icons/io5";
 
 const project = () => {
   return (
@@ -26,11 +26,28 @@ const project = () => {
             <Description>
               <BadgeBox>
                 <Text size={18}>{item.date}</Text>
-                <a href="" title="GitHub" style={{ color: "inherit" }}>
+                <a
+                  href={item.github}
+                  title="GitHub"
+                  target="_blank"
+                  rel="noreferrer"
+                  style={{ color: "inherit" }}
+                >
                   <IoLogoOctocat
                     style={{ fontSize: "22px", marginLeft: "20px" }}
                   />
                 </a>
+                {item.link && (
+                  <a
+                    href={item.link}
+                    title="Link"
+                    target="_blank"
+                    rel="noreferrer"
+                    style={{ color: "inherit" }}
+                  >
+                    <IoLink style={{ fontSize: "22px", marginLeft: "20px" }} />
+                  </a>
+                )}
               </BadgeBox>
               <Text size={24}>{item.title}</Text>
               <BadgeBox>
