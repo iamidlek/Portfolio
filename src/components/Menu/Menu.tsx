@@ -36,8 +36,8 @@ const Menu = () => {
         </Link>
       </MenuItem>
       <MenuItem>
-        <Link href={`/repo`}>
-          <a>
+        <Link href={`https://github.com/iamidlek`}>
+          <a target="_blank">
             <IconBox title="Repository">
               <VscBeaker />
             </IconBox>
