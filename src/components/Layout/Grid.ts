@@ -3,19 +3,17 @@ import { motion } from "framer-motion";
 
 export const variants = {
   invisible: {
-    x: 500,
     opacity: 0,
     scale: 0,
   },
   visible: {
-    x: 0,
     opacity: 1,
     scale: 1,
     transition: {
       duration: 1,
     },
   },
-  exit: { x: -500, opacity: 0, scale: 0, transition: { duration: 1 } },
+  exit: { opacity: 0, scale: 0, transition: { duration: 1 } },
 };
 
 export const Grid = styled(motion.div)`
