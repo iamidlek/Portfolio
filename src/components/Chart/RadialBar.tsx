@@ -1,6 +1,7 @@
 import React from "react";
 import { ApexOptions } from "apexcharts";
 import dynamic from "next/dynamic";
+import { IconImg } from "../Layout/Deco";
 const Chart = dynamic(() => import("react-apexcharts"), { ssr: false });
 
 interface Idata {
@@ -13,7 +14,6 @@ const RadialBar: React.FC<Idata> = ({ name, url, status }) => {
   const opt: ApexOptions = {
     series: [status],
     chart: {
-      height: 350,
       type: "radialBar",
       toolbar: {
         show: false,
@@ -27,9 +27,6 @@ const RadialBar: React.FC<Idata> = ({ name, url, status }) => {
           margin: 0,
           size: "60%",
           background: "#E8EBEA",
-          image: undefined,
-          imageOffsetX: 0,
-          imageOffsetY: 0,
           position: "front",
           dropShadow: {
             enabled: true,
@@ -76,11 +73,11 @@ const RadialBar: React.FC<Idata> = ({ name, url, status }) => {
       gradient: {
         shade: "dark",
         type: "horizontal",
-        shadeIntensity: 0.5,
+        shadeIntensity: 0.3,
         gradientToColors: ["rgba(222,213,255,1)"],
         inverseColors: true,
         opacityFrom: 1,
-        opacityTo: 1,
+        opacityTo: 0.9,
         stops: [0, 100],
       },
     },
@@ -88,6 +85,55 @@ const RadialBar: React.FC<Idata> = ({ name, url, status }) => {
       lineCap: "round",
     },
     labels: [name],
+    responsive: [
+      {
+        breakpoint: 1200,
+        options: {
+          chart: {
+            height: 270,
+          },
+          plotOptions: {
+            radialBar: {
+              hollow: {
+                margin: -5,
+                size: "45%",
+              },
+              track: {
+                strokeWidth: "60%",
+              },
+              dataLabels: {
+                name: {
+                  offsetY: 44,
+                },
+                value: {
+                  offsetY: 12,
+                  fontSize: "24px",
+                },
+              },
+            },
+          },
+        },
+      },
+      {
+        breakpoint: 640,
+        options: {
+          chart: {
+            height: 350,
+          },
+          plotOptions: {
+            radialBar: {
+              hollow: {
+                margin: 0,
+                size: "60%",
+              },
+              track: {
+                strokeWidth: "60%",
+              },
+            },
+          },
+        },
+      },
+    ],
   };
   return (
     <div
@@ -99,13 +145,7 @@ const RadialBar: React.FC<Idata> = ({ name, url, status }) => {
       }}
     >
       <Chart options={opt} series={opt.series} type="radialBar" height={350} />
-      <img
-        src={url}
-        alt={name}
-        width="60"
-        height="60"
-        style={{ position: "absolute", top: "104px" }}
-      />
+      <IconImg src={url} alt={name} />
     </div>
   );
 };
