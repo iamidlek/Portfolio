@@ -17,7 +17,7 @@ const project = () => {
   return (
     <ContentPageContainer maxWidth={1024}>
       <TitleBox>
-        <Text size={24}>Project</Text>
+        <Text size={26}>Project</Text>
       </TitleBox>
       <CardGrid>
         {projects.map((item) => (

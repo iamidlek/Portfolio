@@ -15,7 +15,7 @@ const Skill = () => {
   return (
     <ContentPageContainer maxWidth={1024}>
       <TitleBox>
-        <Text size={24}>{skillCategory[visible]}</Text>
+        <Text size={26}>{skillCategory[visible]}</Text>
       </TitleBox>
       <AnimatePresence>
         {[1, 2, 3, 4, 5].map((tab) =>
