@@ -74,6 +74,26 @@ export const Thumbnail = styled(motion.img)`
   }
 `;
 
+export const IconImg = styled(motion.img)`
+  display: block;
+  width: 60px;
+  height: 60px;
+  flex-shrink: 0;
+  position: absolute;
+  top: 104px;
+
+  @media screen and (max-width: 1200px) {
+    width: 40px;
+    height: 40px;
+    top: 82px;
+  }
+  @media ${(props) => props.theme.breakpoints.sm} {
+    width: 60px;
+    height: 60px;
+    top: 104px;
+  }
+`;
+
 export const Description = styled(motion.div)`
   display: flex;
   flex-direction: column;
