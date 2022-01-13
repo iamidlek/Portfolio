@@ -16,7 +16,7 @@ export const skilldata = [
       status: 80,
     },
     {
-      name: "typescript",
+      name: "Typescript",
       url: "https://raw.githubusercontent.com/devicons/devicon/master/icons/typescript/typescript-original.svg",
       status: 70,
     },
