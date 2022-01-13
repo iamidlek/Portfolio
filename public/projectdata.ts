@@ -42,7 +42,7 @@ export const projects = [
   {
     url: "/javascript-movie.png",
     date: "2021.10",
-    title: "영과 검색 사이트",
+    title: "영화 검색 사이트",
     badges: ["javascript", "Intersection Observer"],
     detail:
       "바닐라 자바스크립트로 구현한 사이트<br />Intersection Observer를 이용하여<br />스크롤에 따라 보여줄 요소를 선택<br /> 스크롤에 의한 lazy loading 구현",
